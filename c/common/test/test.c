@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <assert.h>
 
-TEST(sample_test) {
+TEST(sample_test) 
+{
 	assert(3 == 4);
 }
 
