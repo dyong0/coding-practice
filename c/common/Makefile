@@ -26,6 +26,6 @@ test: $(OBJ)
 	./test
 
 clean:
-	@rm -rf obj/*
+	@rm -rf obj/* test
 
 .PHONY: init test clean
