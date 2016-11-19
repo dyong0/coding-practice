@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -I. -Wall
+CFLAGS := -I. -Wall -std=c99
 SRC := $(wildcard *.c)
 OBJ := $(addprefix obj/,$(notdir $(SRC:.c=.o))) 
 
