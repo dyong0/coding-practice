@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "charset": "utf-8",
+        "lib": [
+            "es6",
+        ],
+        "pretty": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "sourceMap": true
+    },
+    "include": [
+        "**/*.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        "coverage"
+    ]
+}
