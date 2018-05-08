@@ -1,13 +1,13 @@
 import * as chai from 'chai';
 const { expect } = chai;
 
-import * as pathFinder from './shortestAndCostless';
+import { Node, shortestAndCostless } from './shortestAndCostless';
 
 describe('shortestAndCostless', () => {
     it('returns the nodes composing the shortest path', () => {
         // different weights with same costs
         // 1 -> 2 -> 3 has the least weight
-        const nodes: pathFinder.Node[] = [
+        const nodes: Node[] = [
             {
                 id: '1',
                 edges: [
@@ -40,7 +40,7 @@ describe('shortestAndCostless', () => {
         ];
 
 
-        const pathFound = pathFinder.shortestAndCostless('1', '3', 10, nodes);
+        const pathFound = shortestAndCostless('1', '3', 10, nodes);
         expect(pathFound).to.deep.eq({
             nodes: nodes.slice(0, 3),
             totalCost: 0,
@@ -52,7 +52,7 @@ describe('shortestAndCostless', () => {
         // same weight but different costs
         // 1 -> 2 -> 3
         // 1 -> 4 -> 3
-        const nodes: pathFinder.Node[] = [
+        const nodes: Node[] = [
             {
                 id: '1',
                 edges: [
@@ -84,7 +84,7 @@ describe('shortestAndCostless', () => {
         ];
 
 
-        const pathFound = pathFinder.shortestAndCostless('1', '3', 40, nodes);
+        const pathFound = shortestAndCostless('1', '3', 40, nodes);
         expect(pathFound).to.deep.eq({
             nodes: [nodes[0], nodes[3], nodes[2]],
             totalCost: 8,
@@ -96,7 +96,7 @@ describe('shortestAndCostless', () => {
         // same weight but different costs
         // 1 -> 5(costs 1) -> 2            3 -> 7
         // 1 -> 4(costs 1) -> 2 ->(cached) 3 -> 6 -> 7
-        const nodes: pathFinder.Node[] = [
+        const nodes: Node[] = [
             {
                 id: '1',
                 edges: [
@@ -148,6 +148,6 @@ describe('shortestAndCostless', () => {
             },
         ];
 
-        const pathFound = pathFinder.shortestAndCostless('1', '7', 40, nodes);
+        const pathFound = shortestAndCostless('1', '7', 40, nodes);
     });
 })
