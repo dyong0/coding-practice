@@ -1,3 +1,5 @@
+// don't remember where this problem originated from, just memorized and solved it
+
 export interface Edge {
     to: string;
     weight: number;

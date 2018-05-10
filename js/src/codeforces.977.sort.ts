@@ -1,3 +1,5 @@
+// http://codeforces.com/problemset/problem/977/D
+
 export function solveProblem(A: number[]): number[] {
     if (A.length === 2) {
         if ((A[1] / 3) === A[0] || ((A[1] * 2) === A[0])) {
