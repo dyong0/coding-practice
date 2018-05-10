@@ -6,7 +6,7 @@
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
-            "args": ["-r", "ts-node/register", "--no-timeout", "--exit", "${relativeFile}"],
+            "args": ["-r", "ts-node/register", "--no-timeouts", "--exit", "${relativeFile}"],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
             "internalConsoleOptions": "openOnSessionStart"
@@ -16,7 +16,7 @@
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
-            "args": ["-r", "ts-node/register", "--no-timeout", "--exit", "${workspaceRoot}/src/**/*.test.ts"],
+            "args": ["-r", "ts-node/register", "--no-timeouts", "--exit", "${workspaceRoot}/src/**/*.test.ts"],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
             "internalConsoleOptions": "openOnSessionStart"

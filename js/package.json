@@ -17,7 +17,7 @@
     "typescript": "^2.8.3"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -r ts-node/register --no-timeout --exit ./src/**/*.test.ts",
+    "test": "./node_modules/mocha/bin/mocha -r ts-node/register --no-timeouts --exit ./src/**/*.test.ts",
     "test:watch": "npm run test -w",
     "lint": "./node_modules/eslint/bin/eslint.js --fix 'src/**/*.ts'"
   },
