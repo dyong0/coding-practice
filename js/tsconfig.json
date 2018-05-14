@@ -7,6 +7,7 @@
         "charset": "utf-8",
         "lib": [
             "es6",
+            "es2017"
         ],
         "pretty": true,
         "noImplicitAny": true,
